@@ -1,0 +1,43 @@
+@import 'variables';
+@font-face {
+	font-family: $font-name1;
+	src: url('../fonts/'+$font-name1);
+	src: local($font-name1), local($font-name1),
+		url('../fonts/'+$font-name1+'.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/'+$font-name1+'.woff') format('woff'),
+		url('../fonts/'+$font-name1+'.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font-name2;
+	src: url('../fonts/'+$font-name2);
+	src: local($font-name2), local($font-name2),
+		url('../fonts/'+$font-name2+'.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/'+$font-name2+'.woff') format('woff'),
+		url('../fonts/'+$font-name2+'.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font-name3;
+	src: url('../fonts/'+$font-name3);
+	src: local($font-name3), local($font-name3),
+		url('../fonts/'+$font-name3+'.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/'+$font-name3+'.woff') format('woff'),
+		url('../fonts/'+$font-name3+'.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $font-name4;
+	src: url('../fonts/'+$font-name4);
+	src: local($font-name4), local($font-name4),
+		url('../fonts/'+$font-name4+'.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/'+$font-name4+'.woff2') format('woff2'),
+		url('../fonts/'+$font-name4+'.woff') format('woff'),
+		url('../fonts/'+$font-name4+'.ttf') format('truetype'),
+		url('../fonts/'+$font-name4+'.svg#roadnumbersregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

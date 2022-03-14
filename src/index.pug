@@ -1,0 +1,265 @@
+mixin svg(name)
+    svg(class="icon icon-" + name)
+        use(xlink:href="images/sprite/sprite.svg#"+name)
+html(lang='ru') 
+    head 
+        meta(charset='utf-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/jquery.fancybox.min.css")
+        link(rel="stylesheet", href="css/jquery-ui.css")
+        link(rel="stylesheet", href="css/bootstrap.css")
+        script(src="js/jquery-1.10.2.js") 
+        script(src="js/main.js")
+        script(src="js/jquery.maskedinput.min.js")
+        script(src="js/jquery-ui.min.js")
+        script(src="js/jquery.ui.touch-punch.min.js")
+        script(src="js/bootstrap.min.js")
+        script 
+            include js/slider.js
+        title Заголовок title
+    body 
+        .h-top-line
+            .main 
+                .logo 
+                    img(src='images/logo.jpg')
+                .h-info 
+                    .h-reg 
+                        a(href="#") Регистрация
+                        a(href="#") Вход 
+                    .h-info-soc 
+                        a(href="#")
+                            +svg('vk') 
+                        a(href="#")
+                            +svg('inst')
+                        a(href="#")
+                            +svg('fs')
+        main 
+            .b-main-text 
+                .main-text 
+                    h2 Давно мечтаете о красивом авто номере?
+                    p. 
+                        У нас вы найдёте множество предложений - от автомобиля с просто красивым 
+                        номером до авто со статусным спецномером, который может многое сказать 
+                        о его владельце. 
+                    p. 
+                        Чтобы купить автомобиль с номером, просто свяжитесь с продавцом 
+                        и обсудите детали. Для связи с ним вы можете использовать телефон,
+                        внутреннюю систему личных сообщеzний или можете задать вопрос 
+                        на странице предложения.
+                .but 
+                    span Связаться с продавцом
+            .search 
+                h1 Продайте или купите автомобиль с номером
+                form(action="",class='search-form')
+                    .search-left 
+                        .search-tab-row
+                            .search-tab
+                                .search-tab__btn Куплю
+                                .search-tab__btn.btn-active Продам
+                            .search-tab
+                                .search-tab__btn.btn-active Авто
+                                .search-tab__btn Мото
+                        select(name="region") 
+                            option(value="0") Выбрать регион 
+                            option(value="1") Калужская область
+                            option(value="2") Московская область
+                        center  
+                            .search-but-dop Скрыть расширенный поиск
+                        .b-polz-maker
+                            #price
+                            .filter-row 
+                                span Цена от
+                                input(type="text",name='priceot',class='rezult-price1',placeholder='0')
+                                span до
+                                input(type="text",name='pricedo',class='rezult-price2',placeholder='100000')
+                        .search-select1 
+                            label Сортировать
+                            select(name="sort") 
+                                option(value="0") по дате размещения
+                                option(value="1") по цене, по возрастанию
+                                option(value="2") по цене, по убыванию   
+                    .search-right
+                        .search-num
+                            .dropdown
+                                input(type="text", align="bottom", value, id="numb-1", maxlength="1", placeholder="О", class="new-num-sm",data-letters="1", data-nomer="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                ul.dropdown-menu(aria-labelledby="numb-1")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="A")
+                                        a А
+                                    li(data-value="Б")
+                                        a Б
+                                    li(data-value="В")
+                                        a В
+                                    li(data-value="Г")
+                                        a Г
+                                    li(data-value="Д")
+                                        a Д
+                            .dropdown
+                                input(type="text", id="numb-2", maxlength="1", placeholder="7", class="new-num",data-letters="1", data-nomer="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                ul.dropdown-menu(aria-labelledby="numb-2")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="1")
+                                        a 1
+                                    li(data-value="2")
+                                        a 2
+                                    li(data-value="3")
+                                        a 3
+                                    li(data-value="4")
+                                        a 4
+                                    li(data-value="5")
+                                        a 5
+                            .dropdown
+                                input(type="text", id="numb-3", maxlength="1", placeholder="7", class="new-num",data-letters="1", data-nomer="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                ul.dropdown-menu(aria-labelledby="numb-3")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="1")
+                                        a 1
+                                    li(data-value="2")
+                                        a 2
+                                    li(data-value="3")
+                                        a 3
+                                    li(data-value="4")
+                                        a 4
+                                    li(data-value="5")
+                                        a 5
+                            .dropdown
+                                input(type="text", id="numb-4", maxlength="1", placeholder="7", class="new-num", data-letters="1", data-nomer="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                ul.dropdown-menu(aria-labelledby="numb-4")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="1")
+                                        a 1
+                                    li(data-value="2")
+                                        a 2
+                                    li(data-value="3")
+                                        a 3
+                                    li(data-value="4")
+                                        a 4
+                                    li(data-value="5")
+                                        a 5
+                            .dropdown
+                                input(type="text", align="bottom", id="numb-5", maxlength="1", placeholder="О", class="new-num-sm", data-letters="1", data-nomer="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                ul.dropdown-menu(aria-labelledby="numb-5")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="A")
+                                        a А
+                                    li(data-value="Б")
+                                        a Б
+                                    li(data-value="В")
+                                        a В
+                                    li(data-value="Г")
+                                        a Г
+                                    li(data-value="Д")
+                                        a Д
+                            .dropdown
+                                input(type="text", align="bottom", value, id="numb-6", maxlength="1", placeholder="О", class="new-num-sm",data-letters="1", data-nomer="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                ul.dropdown-menu(aria-labelledby="numb-6")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="A")
+                                        a А
+                                    li(data-value="Б")
+                                        a Б
+                                    li(data-value="В")
+                                        a В
+                                    li(data-value="Г")
+                                        a Г
+                                    li(data-value="Д")
+                                        a Д
+                            .dropdown.bottom20m18
+                                input(type="text", align="bottom", value, id="rcode", maxlength="3", placeholder="777", class="new-num rcode", readonly="true", data-numbers="1", data-region="1", data-target="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="true", onclick="showOtherRegion()")
+                                ul.dropdown-menu(id="rcode-dropdown",aria-labelledby="rcode")
+                                    li(data-value)
+                                        a *
+                                    li(data-value="2")
+                                        a Калужская область
+                                    li(data-value="1")
+                                        a Московская область
+                        .search-right-btn
+                            .btn-subscribe
+                                +svg('podpis')
+                                span Подписаться
+                            .btn-reset
+                                +svg('reset')
+                                span Сбросить
+                        .search-right-chk 
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") золотые буквы
+                                span(title='Все буквы в номере одинаковы') ?
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") спецномер
+                                span(title='Все буквы в номере одинаковы') ?
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") золотые цифры
+                                span(title='Все цифры в номере одинаковы') ?
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") только с обменом
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") региональный номер
+                                span(title='Цифры номера совпадают с его регионом') ?
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") без скрытых знаков
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") первая десятка
+                                span(title='Первые десять номеров серии') ?
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") без скрытого региона
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") сотые
+                                span(title='Номера вида: *100**, *200** и т.п.') ?
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") из другого региона
+                            .check  
+                                input(type="checkbox", name='f_Check', id="check1")
+                                label(for="check1") зеркальные
+                                span(title='Номера вида: *101**, *050** и т.п.') ?
+            .b-number 
+                .but.but-sm
+                    span Загрузить еще
+        footer 
+            .main
+                .f-flex
+                    .b-f-menu
+                        .f-menu 
+                            .f-zag Помощь
+                            a(href="#") Вопросы и ответы
+                            a(href="#") Контакты
+                            a(href="#") Блог
+                            a(href="#") Соглашение
+                        .f-menu 
+                            .f-zag Опции
+                            a(href="#") О нас пишут
+                            a(href="#") Рекламные услуги
+                            a(href="#") Отделы ГИБДД
+                            a(href="#") Правила 
+                    - let kp = '<a href="https://kproject.su" target="_blank"><span class="red">K</span>project</a>';
+                    .f-copy 
+                        div
+                            span 2011-2022 &copy; Название
+                            span.f-copy-dev |
+                            span Разработано !{kp}
+        #topcontrol(title='К началу страницы')
+        script(src="js/wow.min.js") 
+        script(src="js/jquery.fancybox.min.js") 
+        script 
+            include js/dropdown.js
+        script 
+            include js/wow.js
+                
+                
